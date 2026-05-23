@@ -1,0 +1,20 @@
+@use "../config";
+.container {
+    margin: 0 auto;
+    max-width: calc(config.$bp0 - 20px);
+    @media (max-width: config.$bp0) {
+        max-width: calc(config.$bp1 - 20px);
+    }
+    @media (max-width: config.$bp1) {
+        max-width: calc(config.$bp2 - 20px);
+    }
+    @media (max-width: config.$bp2) {
+        max-width: calc(config.$bp3 - 20px);
+    }
+    @media (max-width: config.$bp3) {
+        max-width: calc(config.$bp4 - 10px);
+    }
+    @media (max-width: config.$bp4) {
+        max-width: config.$bp5;
+    }
+}

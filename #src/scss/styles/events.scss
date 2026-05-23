@@ -1,0 +1,194 @@
+@use "../config";
+.events {
+    &--container {
+        background-color: config.$prime;
+        padding: 125px 100px;
+        @media (max-width: config.$bp0) {
+            padding: 90px 75px;
+        }
+        @media (max-width: config.$bp1) {
+            padding: 50px 40px;
+        }
+        @media (max-width: config.$bp3) {
+            padding: 40px 10px 30px;
+        }
+    }
+
+    &--body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @media (max-width: config.$bp1) {
+            gap: 20px;
+        }
+    }
+
+    &--title {
+        width: 1200px;
+        @media (max-width: config.$bp0) {
+            width: 100%;
+        }
+        @media (max-width: config.$bp2) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &--content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        @media (max-width: config.$bp1) {
+            flex-direction: column-reverse;
+            gap: 5px;
+        }
+    }
+
+    &--image {
+        position: relative;
+        height: 847px;
+        width: 485px;
+        display: flex;
+        img {
+            height: 100%;
+        }
+        z-index: 1;
+        @media (max-width: config.$bp0) {
+            height: 647px;
+            width: 370px;
+        }
+        @media (max-width: config.$bp3) {
+            height: 400px;
+            width: 229px;
+        }
+        @media (max-width: config.$bp4) {
+            height: 309px;
+            width: 177px;
+        }
+    }
+
+    &--decor {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-56%, -52%);
+        @media (max-width: config.$bp0) {
+            width: 800px;
+            img {
+                width: 100%;
+            }
+        }
+        @media (max-width: config.$bp1) {
+            top: auto;
+            bottom: 0;
+            transform: translate(-56%, 0);
+            width: 750px;
+        }
+        @media (max-width: config.$bp3) {
+            width: 444px;
+        }
+        @media (max-width: config.$bp4) {
+            width: 304px;
+            bottom: 20px;
+        }
+    }
+
+    &--item {
+        font-family: config.$Gogol;
+        font-size: 50px;
+        color: #fff;
+        position: absolute;
+        max-width: 620px;
+        @media (max-width: config.$bp0) {
+            font-size: 40px;
+            max-width: 420px;
+        }
+        @media (max-width: config.$bp1) {
+            position: static;
+            max-width: 100%;
+            text-align: center;
+        }
+        @media (max-width: config.$bp3) {
+            font-size: 30px;
+        }
+        @media (max-width: config.$bp4) {
+            font-size: 18px;
+        }
+        &-1 {
+            top: 150px;
+            left: 150px;
+            @media (max-width: config.$bp0) {
+                left: 50px;
+            }
+        }
+
+        &-2 {
+            top: 50%;
+            left: 0;
+        }
+
+        &-3 {
+            bottom: 0;
+            left: 490px;
+            @media (max-width: config.$bp0) {
+                left: 100px;
+            }
+        }
+
+        &-4 {
+            top: 50px;
+            right: 50px;
+            @media (max-width: config.$bp0) {
+                right: 250px;
+            }
+        }
+
+        &-5 {
+            top: 230px;
+            right: 300px;
+            @media (max-width: config.$bp0) {
+                right: 100px;
+            }
+        }
+
+        &-6 {
+            bottom: 150px;
+            right: -90px;
+        }
+    }
+
+    &--footer {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @media (max-width: config.$bp3) {
+            gap: 10px;
+        }
+    }
+
+    &--btn {
+        align-self: flex-end;
+        @media (max-width: config.$bp2) {
+            align-self: center;
+        }
+    }
+
+    &--text {
+        color: #fff;
+        font-family: config.$Mont;
+        font-size: 16px;
+        text-align: center;
+        align-self: center;
+        width: 1000px;
+        @media (max-width: config.$bp2) {
+            width: 100%;
+        }
+        @media (max-width: config.$bp3) {
+            font-size: 10px;
+        }
+        @media (max-width: config.$bp4) {
+            font-size: 8px;
+        }
+    }
+}

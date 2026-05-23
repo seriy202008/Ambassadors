@@ -1,0 +1,169 @@
+@use "../config";
+.contacts {
+    height: 788px;
+    @media (max-width: config.$bp3) {
+        height: 368px;
+    }
+    @media (max-width: config.$bp4) {
+        height: 354px;
+    }
+    &--container {
+        padding: 125px 100px 325px;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        @media (max-width: config.$bp0) {
+            padding: 90px 75px 325px;
+        }
+        @media (max-width: config.$bp1) {
+            padding: 50px 40px 325px;
+        }
+        @media (max-width: config.$bp3) {
+            padding: 40px 10px 30px;
+        }
+    }
+
+    &--body {
+        display: flex;
+        flex-direction: column;
+        gap: 115px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        @media (max-width: config.$bp1) {
+            gap: 50px;
+        }
+        @media (max-width: config.$bp2) {
+            align-items: flex-start;
+        }
+        @media (max-width: config.$bp3) {
+            gap: 20px;
+        }
+    }
+
+    &--title {
+        text-align: center;
+    }
+
+    &--list {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        @media (max-width: config.$bp1) {
+            flex-direction: column;
+            gap: 20px;
+            width: 40%;
+        }
+        @media (max-width: config.$bp3) {
+            gap: 10px;
+        }
+    }
+
+    &--item {
+        cursor: pointer;
+        display: flex;
+        width: 140px;
+        height: 140px;
+        border-radius: 5px;
+        border: 2px solid #000;
+        background-color: transparent !important;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: config.$bp1) {
+            width: 100px;
+            height: 100px;
+        }
+        @media (max-width: config.$bp2) {
+            margin-left: 50px;
+        }
+        @media (max-width: config.$bp3) {
+            margin-left: 30px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &--icon {
+        width: 70px;
+        height: 70px;
+        img {
+            width: 100%;
+        }
+        @media (max-width: config.$bp1) {
+            width: 50px;
+            height: 50px;
+        }
+        @media (max-width: config.$bp3) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &--image {
+        position: absolute;
+        bottom: 0;
+        right: 100px;
+        z-index: 1;
+        width: 430px;
+        height: 600px;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: config.$bp2) {
+            bottom: 200px;
+            width: 300px;
+            height: 440px;
+        }
+        @media (max-width: config.$bp3) {
+            bottom: 60px;
+            width: 136px;
+            height: 200px;
+        }
+        @media (max-width: config.$bp4) {
+            bottom: 50px;
+            right: 50px;
+        }
+    }
+
+    &--decor {
+        position: absolute;
+        bottom: -120px;
+        left: -170px;
+        z-index: 0;
+        width: 500px;
+        transform: rotate(120deg) scale(-1, 1);
+        img {
+            width: 100%;
+        }
+        @media (max-width: config.$bp1) {
+            display: none;
+        }
+        &-right {
+            bottom: auto;
+            left: auto;
+            top: 0;
+            right: -140px;
+            @media (max-width: config.$bp1) {
+                display: block;
+            }
+            @media (max-width: config.$bp2) {
+                z-index: 2;
+                top: auto;
+                bottom: 50px;
+                right: -10px;
+                width: 400px;
+                transform: rotate(300deg) scale(-1, 1);
+            }
+            @media (max-width: config.$bp3) {
+                width: 200px;
+                right: 60px;
+                bottom: -25px;
+            }
+            @media (max-width: config.$bp4) {
+                bottom: -15px;
+                right: 5px;
+            }
+        }
+    }
+}

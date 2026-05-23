@@ -1,0 +1,47 @@
+@use "../config";
+.nav {
+    &--list {
+        display: flex;
+        gap: 115px;
+        @media (max-width: config.$bp0) {
+            gap: 75px;
+        }
+        @media (max-width: config.$bp1) {
+            gap: 60px;
+        }
+    }
+
+    &--link {
+        position: relative;
+        font-family: config.$Mont;
+        font-weight: 400;
+        font-size: 16px;
+        transition: all 300ms;
+        &-bold {
+            font-weight: 600;
+        }
+        @media (max-width: config.$bp1) {
+            font-size: 14px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 1px;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            background-color: #000;
+            transition: all 300ms;
+        }
+        &:hover,
+        &:focus {
+            font-weight: 600;
+            &::after {
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+}

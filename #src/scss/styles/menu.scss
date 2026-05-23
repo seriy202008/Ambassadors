@@ -1,0 +1,152 @@
+@use "../config";
+.menu {
+    transition: all 800ms;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 10;
+    width: 100%;
+    height: 597px;
+    &._active {
+        left: 0;
+    }
+
+    &--darked {
+        display: block;
+        width: 100vw;
+        height: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 8;
+        background-color: rgba(0, 0, 0, 0);
+        transition: all 800ms;
+        &._active {
+            height: 110vh;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 67px;
+        padding-left: 100px;
+        padding-right: 100px;
+        @media (max-width: config.$bp0) {
+            padding-left: 75px;
+            padding-right: 75px;
+        }
+        @media (max-width: config.$bp1) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        @media (max-width: config.$bp3) {
+            padding-left: 10px;
+            padding-right: 10px;
+            height: 57px;
+        }
+    }
+
+    &--logo {
+        img {
+            width: 124px;
+            @media (max-width: config.$bp3) {
+                width: 80px;
+            }
+        }
+    }
+
+    &--burgerBtn {
+        background-color: transparent;
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        cursor: pointer;
+        border-radius: 5px;
+        span {
+            display: block;
+            background-color: #000;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            &:last-child {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: rgba(137, 137, 137, 0.2);
+        }
+        @media (max-width: config.$bp4) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &--content {
+        margin-top: 20px;
+        @media (max-width: config.$bp3) {
+            margin-top: 16px;
+        }
+        @media (max-width: config.$bp4) {
+            margin-top: 12px;
+        }
+    }
+
+    &--list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+        @media (max-width: config.$bp3) {
+            gap: 35px;
+        }
+        @media (max-width: config.$bp4) {
+            gap: 25px;
+        }
+    }
+
+    &--link {
+        position: relative;
+        font-family: config.$Mont;
+        font-weight: 400;
+        font-size: 20px;
+        transition: all 300ms;
+        &-bold {
+            font-weight: 600;
+        }
+        @media (max-width: config.$bp3) {
+            font-size: 16px;
+        }
+        @media (max-width: config.$bp4) {
+            font-size: 12px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 1px;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            background-color: #000;
+            transition: all 300ms;
+        }
+        &:hover,
+        &:focus {
+            font-weight: 600;
+            &::after {
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+}

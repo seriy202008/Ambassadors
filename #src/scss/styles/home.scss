@@ -1,0 +1,162 @@
+@use "../config";
+.home {
+    height: 1080px;
+    @media (max-width: config.$bp3) {
+        height: 830px;
+    }
+    @media (max-width: config.$bp4) {
+        height: 597px;
+    }
+    &--container {
+        display: flex;
+        height: 100%;
+        position: relative;
+        @media (max-width: config.$bp1) {
+            flex-direction: column;
+        }
+    }
+
+    &--body {
+        width: 57%;
+        height: 100%;
+        @media (max-width: config.$bp0) {
+            width: 45%;
+        }
+        @media (max-width: config.$bp1) {
+            width: 100%;
+        }
+    }
+
+    &--content {
+        padding: 125px 100px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: config.$bp0) {
+            padding: 125px 75px;
+        }
+        @media (max-width: config.$bp1) {
+            padding: 125px 40px;
+        }
+        @media (max-width: config.$bp3) {
+            padding: 65px 10px 30px;
+            gap: 20px;
+        }
+    }
+
+    &--title {
+        @media (max-width: config.$bp1) {
+            width: 70%;
+        }
+        @media (max-width: config.$bp3) {
+            width: 100%;
+        }
+    }
+
+    &--subtitle {
+        font-family: config.$Mont;
+        width: 54%;
+        font-size: 20px;
+        flex: 1 1 auto;
+        @media (max-width: config.$bp0) {
+            width: 100%;
+        }
+        @media (max-width: config.$bp1) {
+            flex: 0 1 auto;
+            width: 70%;
+        }
+        @media (max-width: config.$bp3) {
+            width: 100%;
+            font-size: 16px;
+            margin-top: -15px;
+        }
+        @media (max-width: config.$bp4) {
+            font-size: 12px;
+        }
+    }
+
+    &--btn {
+        @media (max-width: config.$bp1) {
+            margin-top: -70px;
+        }
+        @media (max-width: config.$bp2) {
+            margin-top: 0;
+        }
+        @media (max-width: config.$bp3) {
+            align-self: center;
+        }
+    }
+
+    &--image {
+        width: 43%;
+        height: 1080px;
+        position: relative;
+        @media (max-width: config.$bp0) {
+            width: 55%;
+        }
+        @media (max-width: config.$bp1) {
+            display: none;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &--imageContent {
+        display: none;
+        @media (max-width: config.$bp1) {
+            display: block;
+            width: 613px;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            position: relative;
+        }
+        @media (max-width: config.$bp2) {
+            margin-left: 0;
+        }
+        @media (max-width: config.$bp3) {
+            height: 400px;
+            width: 350px;
+            align-self: center;
+            margin: 0;
+        }
+        @media (max-width: config.$bp4) {
+            width: 181px;
+            height: 238px;
+            margin: 0;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 20%;
+        }
+    }
+    &--names {
+        position: absolute;
+        top: 39%;
+        right: 4%;
+        font-family: config.$Gogol;
+        font-size: 40px;
+        color: white;
+        @media (max-width: config.$bp1) {
+            top: 59%;
+            width: 400px;
+        }
+        @media (max-width: config.$bp3) {
+            font-size: 30px;
+            width: 100%;
+            top: 72%;
+            right: 0;
+            text-align: center;
+        }
+        @media (max-width: config.$bp4) {
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@use "../config";
+.title {
+    font-family: config.$Mak;
+    font-size: 70px;
+    font-weight: 700;
+    &-white {
+        color: #fff;
+    }
+    @media (max-width: config.$bp3) {
+        font-size: 50px;
+    }
+    @media (max-width: config.$bp4) {
+        font-size: 40px;
+    }
+}

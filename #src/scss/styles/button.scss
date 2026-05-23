@@ -1,0 +1,26 @@
+@use "../config";
+.btn {
+    display: block;
+    cursor: pointer;
+    width: 296px;
+    height: 48px;
+    background-color: config.$prime;
+    border-radius: 5px;
+    box-shadow: -4px 4 21px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: config.$Mont;
+    font-size: 20px;
+    color: #fff !important;
+    &-white {
+        background-color: #fff;
+        color: config.$prime !important;
+    }
+    @media (max-width: config.$bp3) {
+        font-size: 16px;
+    }
+    @media (max-width: config.$bp4) {
+        font-size: 14px;
+    }
+}

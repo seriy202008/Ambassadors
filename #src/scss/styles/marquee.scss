@@ -1,0 +1,40 @@
+@use "../config";
+@keyframes marquee {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    } /* Движение влево */
+}
+.marquee {
+    &--container {
+        height: 73px;
+        background-color: config.$prime;
+        display: flex;
+        align-items: center;
+        @media (max-width: config.$bp1) {
+            height: 53px;
+        }
+        @media (max-width: config.$bp3) {
+            height: 31px;
+        }
+    }
+
+    &--marquee {
+        font-family: config.$Mont;
+        color: #fff;
+        font-size: 30px;
+        text-wrap: nowrap;
+        animation: marquee 12s linear infinite; /* Имя, длительность, тип, повторение */
+        @media (max-width: config.$bp1) {
+            font-size: 22px;
+        }
+        @media (max-width: config.$bp3) {
+            font-size: 16px;
+        }
+        @media (max-width: config.$bp4) {
+            font-size: 12px;
+        }
+    }
+}

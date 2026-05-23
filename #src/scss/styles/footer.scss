@@ -1,0 +1,38 @@
+@use "../config";
+.footer {
+    background-color: config.$prime;
+    &--container {
+        padding: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: config.$bp1) {
+            padding: 40px;
+        }
+        @media (max-width: config.$bp2) {
+            padding: 30px;
+        }
+        @media (max-width: config.$bp3) {
+            padding: 20px;
+        }
+    }
+
+    &--logo {
+        width: 300px;
+        img {
+            width: 100%;
+        }
+        @media (max-width: config.$bp1) {
+            width: 250px;
+        }
+        @media (max-width: config.$bp2) {
+            width: 200px;
+        }
+        @media (max-width: config.$bp3) {
+            width: 150px;
+        }
+        @media (max-width: config.$bp4) {
+            width: 125px;
+        }
+    }
+}
