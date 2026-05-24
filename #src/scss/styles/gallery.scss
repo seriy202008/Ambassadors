@@ -192,6 +192,9 @@
             width: 120px;
             height: 120px;
         }
+        @media (max-width: config.$bp2) {
+            display: none;
+        }
     }
     &--pagination {
         gap: 7px;
